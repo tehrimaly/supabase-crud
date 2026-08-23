@@ -1,7 +1,9 @@
 # Supabase File Manager (Web UI)
 
-A Next.js web app that does the same file CRUD as the terminal Python app —
-upload, list, download, edit metadata, delete — running in the browser, backed
+<img width="1022" height="531" alt="image" src="https://github.com/user-attachments/assets/28b56cab-4b33-44ad-ba8a-5421e9f20754" />
+
+A Next.js web app that does the same file CRUD as the terminal Python app
+upload, list, download, edit metadata, delete running in the browser, backed
 by the same Supabase project and Edge Function you already deployed.
 
 This exists because the terminal Python app can't be hosted on Vercel:
@@ -12,7 +14,7 @@ web page instead.
 ## How it connects to what you already built
 
 - Same `files_metadata` table, same `user-files` bucket, same `validate-file`
-  Edge Function — nothing new needed on the Supabase side.
+  Edge Function nothing new needed on the Supabase side.
 - The Supabase **service_role** key is only ever used inside `app/api/**`
   route handlers (`lib/supabaseAdmin.ts`), which run on the server. It's never
   sent to the browser.
@@ -25,7 +27,7 @@ cp .env.local.example .env.local
 ```
 
 Edit `.env.local` and fill in your real values (the same ones from your
-Python app's `.env`, using the **legacy service_role key** — the same one
+Python app's `.env`, using the **legacy service_role key** the same one
 that worked when you tested the Edge Function directly):
 
 ```
@@ -40,7 +42,7 @@ Run it:
 npm run dev
 ```
 
-Open http://localhost:3000 — you should see the same files you uploaded from
+Open http://localhost:3000 you should see the same files you uploaded from
 the terminal app, since it's reading the same table.
 
 ## 2. Push this project to GitHub
