@@ -70,19 +70,19 @@ git push -u origin main
 1. Go to https://vercel.com and sign in (GitHub login is easiest).
 2. Click **Add New → Project**.
 3. Select the `supabase-crud-webapp` repo you just pushed.
-4. Vercel auto-detects Next.js — leave the build settings as default.
+4. Vercel auto-detects Next.js leave the build settings as default.
 5. Before clicking Deploy, expand **Environment Variables** and add:
    - `SUPABASE_URL` = `https://cchonwezwezyifksdmxq.supabase.co`
    - `SUPABASE_SERVICE_ROLE_KEY` = your legacy service_role key
    - `SUPABASE_BUCKET` = `user-files`
 6. Click **Deploy**. Wait ~1-2 minutes.
-7. Vercel gives you a live URL like `supabase-crud-webapp.vercel.app` — open
+7. Vercel gives you a live URL like `supabase-crud-webapp.vercel.app` open
    it and test upload/download/delete from the browser.
 
 ## Notes
 
-- `.env.local` is gitignored — your real keys never get committed or pushed.
+- `.env.local` is gitignored your real keys never get committed or pushed.
 - If you ever rotate your service_role key in Supabase, update it in Vercel's
   Project Settings → Environment Variables and redeploy.
 - The "Edit" button in the UI only updates the `uploaded_by` field, to keep
-  scope small — swap it for a full metadata form if you want to extend it.
+  scope small swap it for a full metadata form if you want to extend it.
